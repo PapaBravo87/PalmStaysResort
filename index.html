@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PalmStay Resort offers luxurious stays, a multi-sport arena, and a perfect blend of relaxation and adventure.">
+    <title>Resort Booking & Multi-Sport Arena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
+    <style>
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">PalmStay Resort</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#sports">Sports</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="carousel" id="carousel">
+        <img src="./images/edwin-petrus-KoEklKozWA4-unsplash.jpg" alt="Resort 1" class="active">
+        <img src="./images/edwin-petrus-YpAUqMicv3k-unsplash.jpg" alt="Resort 2">
+        <div class="overlay">
+            <h1>Welcome to PalmStay Resort</h1>
+            <p>Your ultimate getaway for relaxation and adventure</p>
+            <a href="#contact">
+                <button class="button">Book Now</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="./images/r2.jpeg" alt="Luxurious Resort">
+            </div>
+            <div class="about-text">
+                <h3>Discover Luxury & Adventure</h3>
+                <p>
+                    At PalmStay Resort, we are dedicated to creating a perfect blend of serene relaxation and thrilling
+                    adventure. Nestled in the heart of nature, our resort offers breathtaking views, world-class
+                    amenities, and personalized experiences to suit every traveler’s desire.
+                </p>
+                <p>
+                    Whether you're seeking a tranquil retreat or an action-packed getaway, we are here to make every
+                    moment unforgettable. Experience the essence of luxury and let us redefine your idea of paradise.
+                </p>
+                <a href="#">
+                    <button class="button">Learn More</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="sports">
+        <h2 class="section-title">Our Multi-Sport Arena</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="./images/tennis.jpg" alt="Tennis">
+                <div class="content">
+                    <h3>Tennis Courts</h3>
+                    <p>Enjoy our state-of-the-art tennis facilities with professional lighting and coaching options.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/football.jpg" alt="Football">
+                <div class="content">
+                    <h3>Football Field</h3>
+                    <p>Challenge your friends on our pristine football grounds with top-tier amenities.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/basketball.jpg" alt="Basketball">
+                <div class="content">
+                    <h3>Basketball Courts</h3>
+                    <p>Take your game to the next level with our premium basketball courts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="submitButton">Submit</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 PalmStay Resort | Designed with passion | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000);
+    </script>
+</body>
+
+</html>
