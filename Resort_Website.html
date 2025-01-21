@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PalmStay Resort offers luxurious stays, a multi-sport arena, and a perfect blend of relaxation and adventure.">
     <title>Resort Booking & Multi-Sport Arena</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -20,12 +23,19 @@
         }
 
         header {
-            background: linear-gradient(45deg, #263986, #333433);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            /* Ensures the header stays above other elements */
+            background: linear-gradient(45deg, #212123, #333433);
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            /* Optional: adds a shadow for better visibility */
         }
+
 
         header .logo {
             font-size: 1.5rem;
@@ -53,12 +63,14 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            /* Ensures the image covers the container without distortion */
             position: absolute;
             top: 0;
             left: 0;
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
+
 
         .carousel img.active {
             opacity: 1;
@@ -168,65 +180,125 @@
         footer a:hover {
             text-decoration: underline;
         }
+
         .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-}
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
 
-.about-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease-in-out;
-}
+        .about-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease-in-out;
+        }
 
-.about-image img:hover {
-    transform: scale(1.05);
-}
+        .about-image img:hover {
+            transform: scale(1.05);
+        }
 
-.about-text {
-    max-width: 600px;
-    text-align: left;
-}
+        .about-text {
+            max-width: 600px;
+            text-align: left;
+        }
 
-.about-text h3 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #ff7e5f;
-}
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ff7e5f;
+        }
 
-.about-text p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    color: #ddd;
-}
+        .about-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #ddd;
+        }
 
-.about-text .button {
-    margin-top: 10px;
-    background: #ff7e5f;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease-in-out;
-}
+        .about-text .button {
+            margin-top: 10px;
+            background: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease-in-out;
+        }
 
-.about-text .button:hover {
-    background: #feb47b;
-}
+        .about-text .button:hover {
+            background: #feb47b;
+        }
 
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1e1e1e;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #ff7e5f;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #2c2c2c;
+            color: #fff;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ff7e5f;
+            box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
+        }
+
+        .submitButton {
+            align-self: flex-start;
+            background: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background: #feb47b;
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <div class="logo">LuxResorts</div>
+        <div class="logo">PalmStay Resort</div>
         <nav>
             <a href="#">Home</a>
             <a href="#about">About</a>
@@ -236,12 +308,14 @@
     </header>
 
     <section class="carousel" id="carousel">
-        <img src="file:///D:/Prabodh_Bharose/Personal/src/r1.jpeg" alt="Resort 1" class="active">
-        <img src="file:///D:/Prabodh_Bharose/Personal/src/r2.jpeg" alt="Resort 2">
+        <img src="./images/edwin-petrus-KoEklKozWA4-unsplash.jpg" alt="Resort 1" class="active">
+        <img src="./images/edwin-petrus-YpAUqMicv3k-unsplash.jpg" alt="Resort 2">
         <div class="overlay">
-            <h1>Welcome to LuxResorts</h1>
+            <h1>Welcome to PalmStay Resort</h1>
             <p>Your ultimate getaway for relaxation and adventure</p>
-            <button class="button">Book Now</button>
+            <a href="#contact">
+                <button class="button">Book Now</button>
+            </a>
         </div>
     </section>
 
@@ -249,40 +323,45 @@
         <h2 class="section-title">About Us</h2>
         <div class="about-container">
             <div class="about-image">
-                <img src="https://via.placeholder.com/500x400?text=Luxurious+Resort" alt="Luxurious Resort">
+                <img src="./images/r2.jpeg" alt="Luxurious Resort">
             </div>
             <div class="about-text">
                 <h3>Discover Luxury & Adventure</h3>
                 <p>
-                    At LuxResorts, we are dedicated to creating a perfect blend of serene relaxation and thrilling adventure. Nestled in the heart of nature, our resort offers breathtaking views, world-class amenities, and personalized experiences to suit every traveler’s desire. 
+                    At PalmStay Resort, we are dedicated to creating a perfect blend of serene relaxation and thrilling
+                    adventure. Nestled in the heart of nature, our resort offers breathtaking views, world-class
+                    amenities, and personalized experiences to suit every traveler’s desire.
                 </p>
                 <p>
-                    Whether you're seeking a tranquil retreat or an action-packed getaway, we are here to make every moment unforgettable. Experience the essence of luxury and let us redefine your idea of paradise.
+                    Whether you're seeking a tranquil retreat or an action-packed getaway, we are here to make every
+                    moment unforgettable. Experience the essence of luxury and let us redefine your idea of paradise.
                 </p>
-                <button class="button">Learn More</button>
+                <a href="#">
+                    <button class="button">Learn More</button>
+                </a>
             </div>
         </div>
-    </section>    
+    </section>
 
     <section class="section" id="sports">
         <h2 class="section-title">Our Multi-Sport Arena</h2>
         <div class="grid">
             <div class="card">
-                <img src="D:\Prabodh_Bharose\Personal\src\tennis.jpg" alt="Tennis">
+                <img src="./images/tennis.jpg" alt="Tennis">
                 <div class="content">
                     <h3>Tennis Courts</h3>
                     <p>Enjoy our state-of-the-art tennis facilities with professional lighting and coaching options.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="D:\Prabodh_Bharose\Personal\src\football.jpg" alt="Football">
+                <img src="./images/football.jpg" alt="Football">
                 <div class="content">
                     <h3>Football Field</h3>
                     <p>Challenge your friends on our pristine football grounds with top-tier amenities.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="D:\Prabodh_Bharose\Personal\src\basketball.jpg" alt="Basketball">
+                <img src="./images/basketball.jpg" alt="Basketball">
                 <div class="content">
                     <h3>Basketball Courts</h3>
                     <p>Take your game to the next level with our premium basketball courts.</p>
@@ -291,8 +370,31 @@
         </div>
     </section>
 
+    <section class="section" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="submitButton">Submit</button>
+            </form>
+        </div>
+    </section>
+
+
     <footer>
-        <p>&copy; 2024 LuxResorts | Designed with passion | <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2024 PalmStay Resort | Designed with passion | <a href="#">Privacy Policy</a></p>
     </footer>
 
     <script>
@@ -308,4 +410,5 @@
         setInterval(showNextImage, 3000);
     </script>
 </body>
+
 </html>
